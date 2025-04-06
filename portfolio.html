@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Professional Portfolio</title>
+    <style>
+        /* CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            background: #1a1a1a;
+            color: white;
+            padding: 1rem 5%;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header h1 {
+            font-size: 1.5rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 2rem;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #00b4d8;
+        }
+
+        /* Hero Section */
+        #hero {
+            height: 100vh;
+            background: linear-gradient(135deg, #0077b6, #00b4d8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 0 5%;
+        }
+
+        #hero .container {
+            max-width: 800px;
+        }
+
+        #hero img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 1.5rem;
+            border: 4px solid white;
+        }
+
+        #hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        #hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        #hero .btn {
+            background: #fff;
+            color: #0077b6;
+            padding: 0.8rem 2rem;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        #hero .btn:hover {
+            background: #0077b6;
+            color: white;
+        }
+
+        /* Profiles Section */
+        #profiles {
+            padding: 5rem 5%;
+            background: #fff;
+            text-align: center;
+        }
+
+        #profiles h2 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .profile-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .profile-card {
+            background: #f4f4f4;
+            padding: 2rem;
+            border-radius: 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .profile-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile-card i {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #0077b6;
+        }
+
+        .profile-card a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        /* Projects Section */
+        #projects {
+            padding: 5rem 5%;
+            background: #f4f4f4;
+            text-align: center;
+        }
+
+        #projects h2 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .project-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .project-card:hover {
+            transform: scale(1.05);
+        }
+
+        .project-card img {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+
+        /* Footer */
+        footer {
+            background: #1a1a1a;
+            color: white;
+            text-align: center;
+            padding: 2rem 5%;
+        }
+
+        footer p {
+            margin-bottom: 1rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header .container {
+                flex-direction: column;
+            }
+
+            nav ul {
+                margin-top: 1rem;
+            }
+
+            #hero h2 {
+                font-size: 1.8rem;
+            }
+
+            #hero p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <h1>[Your Name]</h1>
+            <nav>
+                <ul>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#profiles">Profiles</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#footer">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="container">
+            <img src="https://via.placeholder.com/150" alt="Your Photo">
+            <h2>Hello, I'm [Your Name]</h2>
+            <p>I'm a [Your Profession] passionate about [Your Interest]. Welcome to my portfolio!</p>
+            <a href="#profiles" class="btn">View My Profiles</a>
+        </div>
+    </section>
+
+    <!-- Profiles Section -->
+    <section id="profiles">
+        <h2>My Profiles</h2>
+        <div class="profile-grid">
+            <div class="profile-card">
+                <i class="fab fa-twitter"></i>
+                <p><a href="https://twitter.com/yourusername" target="_blank">X: @yourusername</a></p>
+            </div>
+            <div class="profile-card">
+                <i class="fab fa-linkedin"></i>
+                <p><a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a></p>
+            </div>
+            <div class="profile-card">
+                <i class="fab fa-github"></i>
+                <p><a href="https://github.com/yourusername" target="_blank">GitHub</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>My Projects</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <img src="https://via.placeholder.com/300x200" alt="Project 1">
+                <h3>Project 1</h3>
+                <p>A brief description of your project.</p>
+            </div>
+            <div class="project-card">
+                <img src="https://via.placeholder.com/300x200" alt="Project 2">
+                <h3>Project 2</h3>
+                <p>A brief description of your project.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <p>Contact me: your.email@example.com</p>
+        <p>&copy; 2025 [Your Name]. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add animation on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.profile-card, .project-card').forEach(card => {
+            observer.observe(card);
+        });
+
+        // Add animate class styles
+        const styleSheet = document.styleSheets[0];
+        styleSheet.insertRule(`
+            .animate {
+                animation: fadeIn 0.5s ease-in;
+            }
+        `, styleSheet.cssRules.length);
+        styleSheet.insertRule(`
+            @keyframes fadeIn {
+                from { opacity: 0; transform: translateY(20px); }
+                to { opacity: 1; transform: translateY(0); }
+            }
+        `, styleSheet.cssRules.length);
+    </script>
+
+    <!-- Font Awesome for Icons (optional) -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>
